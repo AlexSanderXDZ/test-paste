@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            position: absolute;
+        }
+    </style>
+    <script>
+        function moverBotao() {
+            var button = document.getElementById('meuBotao');
+            var windowWidth = window.innerWidth - button.offsetWidth;
+            var windowHeight = window.innerHeight - button.offsetHeight;
+            var newLeft = Math.random() * windowWidth;
+            var newTop = Math.random() * windowHeight;
+            button.style.left = newLeft + "px";
+            button.style.top = newTop + "px";
+        }
+    </script>
+</head>
+
+<body>
+    <h1>oq posso colocar aq?</h1>
+    <button class="button" onclick="location.href='outra_pagina.html'">Sim</button>
+    <button class="button" id="meuBotao" onclick="moverBotao()">Mover Botão</button>
+</body>
+
+</html>
